@@ -21,6 +21,8 @@ class CreateAdrIndicators < ActiveRecord::Migration[5.1]
       t.integer :land_rvr
       t.integer :take_off_rvr
       t.integer :gcol_ramp_lvp
+
+      t.timestamps
     end
   end
 end
