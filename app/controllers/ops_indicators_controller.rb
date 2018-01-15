@@ -1,4 +1,4 @@
-class AdrIndicatorsController < ApplicationController
+class OpsIndicatorsController < ApplicationController
   def index
   end
 
@@ -19,4 +19,6 @@ class AdrIndicatorsController < ApplicationController
 
   def destroy
   end
+
+
 end
