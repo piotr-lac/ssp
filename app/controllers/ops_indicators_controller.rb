@@ -19,6 +19,5 @@ class OpsIndicatorsController < ApplicationController
 
   def destroy
   end
-
-
+  
 end
