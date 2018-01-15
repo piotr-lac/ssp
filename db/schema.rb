@@ -10,6 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180115213032) do
+
+  create_table "adr_indicators", force: :cascade do |t|
+    t.string "stakeholder"
+    t.integer "number_of_operations"
+    t.integer "rwy_incursion"
+    t.integer "twy_incursion"
+    t.integer "app_incursion"
+    t.integer "rwy_excursion"
+    t.integer "twy_excursion"
+    t.integer "app_excursion"
+    t.integer "fuel"
+    t.integer "fsf"
+    t.integer "gcol"
+    t.integer "ramp"
+    t.float "obstacle"
+    t.integer "birdstrike"
+    t.integer "wildlife"
+    t.integer "wild_take_abort"
+    t.integer "go_around"
+    t.integer "land_rvr"
+    t.integer "take_off_rvr"
+    t.integer "gcol_ramp_lvp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
