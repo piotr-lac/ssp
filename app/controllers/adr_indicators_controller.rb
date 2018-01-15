@@ -1,5 +1,6 @@
 class AdrIndicatorsController < ApplicationController
   def index
+    @adr_spis = AdrIndicator.all.select {|spi| spi.stakeholder == "EPKK"}
   end
 
   def show

@@ -1,1 +1,19 @@
 <h1>adr indicators index</h1>
+
+
+<p><%= link_to "Dodaj wskaźniki", new_adr_indicator_path %></p>
+
+<table>
+  <tr>
+  <th> Lotnisko </th>
+  <th> Liczba operacji </th> 
+  <th> Wtargnięcie DS </th> 
+  </tr>
+  <% @adr_spis.each do |spi| %>
+    <tr>
+      <td>  <%= spi.stakeholder %> </td>
+      <td>  <%= spi.number_of_operations %> </td>
+      <td>  <%= spi.rwy_incursion %> </td>
+    </tr>
+  <% end %>
+</table>
