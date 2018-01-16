@@ -6,6 +6,7 @@ class AdrIndicatorsController < ApplicationController
   end
 
   def show
+    @adr_spi = AdrIndicator.find(params[:id])
   end
 
   def new
@@ -19,12 +20,17 @@ class AdrIndicatorsController < ApplicationController
   end
 
   def edit
+    @adr_spi = AdrIndicator.find(params[:id])
   end
 
   def update
+    @adr_spi.update((params.require(:adr_indicator).permit!))
   end
 
   def destroy
+    @adr_spi = AdrIndicator.find(params[:id])
+    @adr_spi.destroy
+    redirect_to adr_indicators_path
   end
 
   private
