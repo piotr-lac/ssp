@@ -4,31 +4,21 @@
 
 <p><%= link_to "Dodaj wskaźniki ADR", new_adr_indicator_path %></p>
 
-<div style="font-size: 12px">
-<table>
+
+<table style="font-size: 12px; text-align: center">
   <tr>
-  <th> Rok </th>
-  <th> Miesiąc </th>
-  <th> Lotnisko </th>
-  <th> Operacje </th> 
-  <th> Wtargnięcie DS </th> 
-  <th> Wtargnięcie DK </th> 
-  <th> Wtargnięcie PP </th> 
-  <th> Wypadnięcie DS </th> 
-  <th> Wypadnięcie DK </th> 
-  <th> Wypadnięcie PP </th> 
-  <th> Rozlanie paliwa </th> 
-  <th> Pożar, Dym, Opary </th> 
-  <th> Kolizje </th> 
-  <th> Ramp </th> 
-  <th> Przeszkody </th> 
-  <th> Zderzenia z ptakami</th> 
-  <th> Dzikie zwierzęta </th> 
-  <th> Przerwany start - zwierzęta </th> 
-  <th> Odejście - zwierzęta </th> 
-  <th> Lądowania poniżej RVR </th> 
-  <th> Starty poniżej RVR </th> 
-  <th> Kolizje lub RAMP podczas LVP </th> 
+    <th> Rok </th>
+    <th> Miesiąc </th>
+    <th> Lotnisko </th>
+    <th> Operacje </th> 
+    <th> Wtargnięcie DS </th> 
+    <th> Wtargnięcie DK </th> 
+    <th> Wtargnięcie PP </th> 
+    <th> Wypadnięcie DS </th> 
+    <th> Wypadnięcie DK </th> 
+    <th> Wypadnięcie PP </th> 
+    <th> Rozlanie paliwa </th> 
+    
   </tr>
   <% @adr_spis.each do |spi| %>
     <tr>
@@ -43,6 +33,21 @@
       <td>  <%= spi.twy_excursion %> </td>
       <td>  <%= spi.app_excursion %> </td>
       <td>  <%= spi.fuel %> </td>
+    </tr>
+    <tr>
+      <th> Pożar, Dym, Opary </th> 
+      <th> Kolizje </th> 
+      <th> Ramp </th> 
+      <th> Przeszkody </th> 
+      <th> Zderzenia z ptakami</th> 
+      <th> Dzikie zwierzęta </th> 
+      <th> Przerwany start - zwierzęta </th> 
+      <th> Odejście - zwierzęta </th> 
+      <th> Lądowania poniżej RVR </th> 
+      <th> Starty poniżej RVR </th> 
+      <th> Kolizje lub RAMP podczas LVP </th> 
+    </tr>
+    <tr>
       <td>  <%= spi.fsf %> </td>
       <td>  <%= spi.gcol %> </td>
       <td>  <%= spi.ramp %> </td>
@@ -53,8 +58,8 @@
       <td>  <%= spi.go_around %> </td>
       <td>  <%= spi.land_rvr %> </td>
       <td>  <%= spi.take_off_rvr %> </td>
-      <td>  <%= spi.gcol_ramp_lvp %> </td>
+      <td>  <%= spi.gcol_ramp_lvp %> </td>      
     </tr>
+   
   <% end %>
 </table>
-</div>
