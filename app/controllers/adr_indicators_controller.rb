@@ -10,12 +10,12 @@ class AdrIndicatorsController < ApplicationController
   end
 
   def new
-    @adr_spi = AdrIndicator.new
+    @adr_indicator = AdrIndicator.new
   end
 
   def create
-    @adr_spi = AdrIndicator.new(params.require(:adr_indicator).permit!)
-    @adr_spi.save
+    @adr_indicator = AdrIndicator.new(adr_indicator_params)
+    @adr_indicator.save
     redirect_to adr_indicators_path
   end
 
@@ -24,7 +24,10 @@ class AdrIndicatorsController < ApplicationController
   end
 
   def update
-    @adr_spi.update((params.require(:adr_indicator).permit!))
+    @adr_spi = AdrIndicator.find(params[:id])
+    @adr_spi.update(adr_spi_params)
+    redirect_to adr_indicators_path
+    
   end
 
   def destroy
@@ -35,17 +38,18 @@ class AdrIndicatorsController < ApplicationController
 
   private
 
-  def permit!
-    each_pair do |key, value|
-      convert_hashes_to_parameters(key, value)
-      self[key].permit! if self[key].respond_to? :permit!
-    end
-    self
-  end
-
-
-  # def adr_spi_params (aby nie wypisywać ręcznie wszystkich params użyto permit!)
-  #   @atr = AdrIndicator.attribute_names.map {|x| x.to_sym}
-  #   params.require(:adr_indicator).permit(:year, :month, :stakeholder, :number_of_operations, :rwy_incursion, :twy_incursion, :app_incursion, :rwy_excursion, :twy_excursion, :app_excursion, :fuel, :fsf, :gcol, :ramp, :obstacle, :birdstrike, :wildlife, :wild_take_abort, :go_around, :land_rvr, :take_of_rvr, :gcol_ramp_lvp, :rwy_incursion_spi)
+  # def permit!
+  #   each_pair do |key, value|
+  #     convert_hashes_to_parameters(key, value)
+  #     self[key].permit! if self[key].respond_to? :permit!
+  #   end
+  #   self
   # end
+
+
+  def adr_indicator_params #(aby nie wypisywać ręcznie wszystkich params można używać permit!)
+    params.require(:adr_indicator).permit(:year, :month, :stakeholder, :number_of_operations, :rwy_incursion, :twy_incursion, :app_incursion, :rwy_excursion, :twy_excursion, :app_excursion, :fuel, :fsf, :gcol, :ramp, :obstacle, :birdstrike, :wildlife, :wild_take_abort, :go_around, :land_rvr, :take_of_rvr, :gcol_ramp_lvp)
+  end
 end
+
+# @atr = AdrIndicator.attribute_names.map {|x| x.to_sym}

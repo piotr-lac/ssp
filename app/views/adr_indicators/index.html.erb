@@ -60,8 +60,8 @@
       <td>  <%= spi.gcol_ramp_lvp %> </td>      
     </tr>  
 </table>
-<%= link_to "Pokaż szczegóły", adr_indicator_path(spi) %>
-<%= link_to "Edytuj", edit_adr_indicator_path(spi) %>
-<%= link_to "Skasuj", adr_indicator_path(spi), method: :delete, data: { confirm: "Czy jestes pewien ?"} %>
+<%= link_to "Pokaż szczegóły", adr_indicator_path(spi.id) %>
+<%= link_to "Edytuj", edit_adr_indicator_path(spi.id) %>
+<%= link_to "Skasuj", adr_indicator_path(spi.id), method: :delete, data: { confirm: "Czy jestes pewien ?"} %>
 <hr>
 <% end %>

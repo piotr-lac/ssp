@@ -1,7 +1,7 @@
 <p>new adr_indicators</p>
 
 <table style="font-size: 14px">
-<%= form_for @adr_spi do |f| %>
+<%= form_for @adr_indicator do |f| %>
   <tr>
     <td>
       <% f.label :year %> Rok
@@ -187,10 +187,7 @@
     </td>
   </tr>
   <tr>
-    <td>
-    </td>
-    <td>
-      <%= f.submit "Zapisz" %>
+    <td><%= f.submit "Zapisz" %>
     </td>
   </tr>
 <% end %>
