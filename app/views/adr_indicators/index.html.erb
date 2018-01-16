@@ -3,8 +3,9 @@
 
 
 <p><%= link_to "Dodaj wskaźniki ADR", new_adr_indicator_path %></p>
+<hr>
 
-
+<% @adr_spis.each do |spi| %>
 <table style="font-size: 12px; text-align: center">
   <tr>
     <th> Rok </th>
@@ -17,10 +18,8 @@
     <th> Wypadnięcie DS </th> 
     <th> Wypadnięcie DK </th> 
     <th> Wypadnięcie PP </th> 
-    <th> Rozlanie paliwa </th> 
-    
-  </tr>
-  <% @adr_spis.each do |spi| %>
+    <th> Rozlanie paliwa </th>     
+  </tr>  
     <tr>
       <td>  <%= spi.year %> </td>
       <td>  <%= spi.month %> </td>
@@ -33,7 +32,7 @@
       <td>  <%= spi.twy_excursion %> </td>
       <td>  <%= spi.app_excursion %> </td>
       <td>  <%= spi.fuel %> </td>
-    </tr>
+    </tr>  
     <tr>
       <th> Pożar, Dym, Opary </th> 
       <th> Kolizje </th> 
@@ -46,7 +45,7 @@
       <th> Lądowania poniżej RVR </th> 
       <th> Starty poniżej RVR </th> 
       <th> Kolizje lub RAMP podczas LVP </th> 
-    </tr>
+    </tr>  
     <tr>
       <td>  <%= spi.fsf %> </td>
       <td>  <%= spi.gcol %> </td>
@@ -59,7 +58,10 @@
       <td>  <%= spi.land_rvr %> </td>
       <td>  <%= spi.take_off_rvr %> </td>
       <td>  <%= spi.gcol_ramp_lvp %> </td>      
-    </tr>
-   
-  <% end %>
+    </tr>  
 </table>
+<%= link_to "Pokaż szczegóły", adr_indicator_path(spi) %>
+<%= link_to "Edytuj", edit_adr_indicator_path(spi) %>
+<%= link_to "Skasuj", adr_indicator_path(spi), method: :delete, data: { confirm: "Czy jestes pewien ?"} %>
+<hr>
+<% end %>
