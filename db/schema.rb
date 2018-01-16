@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116122048) do
+ActiveRecord::Schema.define(version: 20180116193037) do
 
   create_table "adr_indicators", force: :cascade do |t|
     t.string "stakeholder", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180116122048) do
     t.integer "gcol_ramp_lvp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "rwy_incursion_spi"
   end
 
   create_table "ahac_indicators", force: :cascade do |t|
