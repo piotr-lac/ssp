@@ -17,6 +17,8 @@ class CreateOpsIndicators < ActiveRecord::Migration[5.1]
       t.integer :tcas_ra
       t.integer :scf_np
       t.integer :scf_pp
+
+      t.timestamps
     end
   end
 end
