@@ -1,0 +1,2 @@
+class AtmIndicator < ApplicationRecord
+end

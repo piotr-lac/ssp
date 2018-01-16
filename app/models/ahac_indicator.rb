@@ -1,0 +1,2 @@
+class AhacIndicator < ApplicationRecord
+end
