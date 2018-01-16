@@ -1,10 +1,10 @@
 class CreateOpsIndicators < ActiveRecord::Migration[5.1]
   def change
     create_table :ops_indicators do |t|
-      t.string :stakeholder
-      t.integer :year
-      t.string :month
-      t.integer :number_of_operations
+      t.string :stakeholder, null: false
+      t.integer :year, null: false
+      t.string :month, null: false
+      t.integer :number_of_operations, null: false
       t.integer :rwy_excursion
       t.integer :twy_excursion
       t.integer :app_excursion

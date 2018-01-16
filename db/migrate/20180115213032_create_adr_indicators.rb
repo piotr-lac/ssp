@@ -1,8 +1,10 @@
 class CreateAdrIndicators < ActiveRecord::Migration[5.1]
   def change
     create_table :adr_indicators do |t|
-      t.string :stakeholder
-      t.integer :number_of_operations
+      t.string :stakeholder, null: false
+      t.integer :year, null: false
+      t.string :month, null: false
+      t.integer :number_of_operations, null: false
       t.integer :rwy_incursion
       t.integer :twy_incursion
       t.integer :app_incursion
