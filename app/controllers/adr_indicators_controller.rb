@@ -1,6 +1,6 @@
 class AdrIndicatorsController < ApplicationController
   def index
-    stake = "EPKK"
+    stake = ""
     return @adr_spis = AdrIndicator.all.select {|spi| spi.stakeholder == stake} if stake != ""
     @adr_spis = AdrIndicator.all
   end
