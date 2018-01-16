@@ -13,6 +13,8 @@ class AdrIndicatorsController < ApplicationController
   end
 
   def create
+    @adr_spi = AdrIndicator.new(adr_spi_params)
+    @adr_spi.save
   end
 
   def edit
@@ -23,4 +25,9 @@ class AdrIndicatorsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def adr_spi_params
+    params.require(::).permit()
 end
