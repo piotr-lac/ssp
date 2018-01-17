@@ -3,100 +3,58 @@
 <div style="font-size: 16px">
   <table>
     <tr>
+      <th> Wskaźnik </th> <th> Wartość </th>
+    </tr>
+    <tr>
       <td>
-
-    Rok ||<%= @adr_spi.year %> <br> 
-  
-    Miesiąc  ||<%= @adr_spi.month %>  <br> 
-  
-    Lotnisko ||<%= @adr_spi.stakeholder %> <br> 
-  
-    Liczba operacji ||<%= @adr_spi.number_of_operations %>  <br> 
-    
-    Wtargnięcia na DS ||<%= @adr_spi.rwy_incursion %>  <br>
-    
-    Wtargnięcia na DK ||<%= @adr_spi.twy_incursion %>  <br>
-    
-    Wtargnięcia na PP ||<%= @adr_spi.app_incursion %>  <br>
-  
-    Wypadnięcia z DS ||<%= @adr_spi.rwy_excursion %>  <br>
-  
-    Wypadnięcia z DK ||<%= @adr_spi.twy_excursion %>  <br>
-  
-    Wypadnięcia z PP ||<%= @adr_spi.app_excursion %>  <br>
-  
-    Rozlewiska paliwa ||<%= @adr_spi.fuel %>  <br>
-  
-    Pożar, Dym, Opary ||<%= @adr_spi.fsf %>  <br>
-  
-    Kolizje GCOL ||<%= @adr_spi.gcol %>  <br>
-  
-    Zdarzenia RAMP ||<%= @adr_spi.ramp %>  <br>
-  
-    Przeszkody ||<%= @adr_spi.obstacle %>  <br>
-  
-    Zderzenia z ptakami ||<%= @adr_spi.birdstrike %>  <br>  
-  
-    Zderzenia ze zwierzętami ||<%= @adr_spi.wildlife %>  <br>
-  
-    Przerwany start przez zwierzęta ||<%= @adr_spi.wild_take_abort %>  <br>
-  
-    Go Around z powodu zwierząt ||<%= @adr_spi.go_around %>  <br>
-    
-    Zderzenia ze zwierzętami ||<%= @adr_spi.wildlife %>  <br>
-  
-    Lądowanie poniżej RVR ||<%= @adr_spi.land_rvr %>  <br>
-  
-    Start poniżej RVR ||<%= @adr_spi.take_off_rvr %>  <br>
-  
-    GCOL lub RAMP przy LVP ||<%= @adr_spi.gcol_ramp_lvp %> <br>
+    Rok <br>
+    Miesiąc  <br>
+    Lotnisko <br>
+    Liczba operacji <br>
+    Wtargnięcia na DS <br>
+    Wtargnięcia na DK <br>
+    Wtargnięcia na PP <br>
+    Wypadnięcia z DS <br>
+    Wypadnięcia z DK <br>
+    Wypadnięcia z PP <br>
+    Rozlewiska paliwa <br>
+    Pożar, Dym, Opary <br>
+    Kolizje GCOL <br>
+    Zdarzenia RAMP <br>
+    Przeszkody <br>
+    Zderzenia z ptakami <br>
+    Zderzenia ze zwierzętami <br>
+    Przerwany start przez zwierzęta <br>
+    Go Around z powodu zwierząt <br>
+    Zderzenia ze zwierzętami <br>
+    Lądowanie poniżej RVR <br>
+    Start poniżej RVR <br>
+    GCOL lub RAMP przy LVP <br>
   </td>
   <td>
-    Rok ||<%= @adr_spi.year %> <br> 
-  
-    Miesiąc  ||<%= @adr_spi.month %>  <br> 
-  
-    Lotnisko ||<%= @adr_spi.stakeholder %> <br> 
-  
-    Liczba operacji ||<%= @adr_spi.number_of_operations %>  <br> 
-    
-    Wtargnięcia na DS ||<%= @adr_spi.rwy_incursion %>  <br>
-    
-    Wtargnięcia na DK ||<%= @adr_spi.twy_incursion %>  <br>
-    
-    Wtargnięcia na PP ||<%= @adr_spi.app_incursion %>  <br>
-  
-    Wypadnięcia z DS ||<%= @adr_spi.rwy_excursion %>  <br>
-  
-    Wypadnięcia z DK ||<%= @adr_spi.twy_excursion %>  <br>
-  
-    Wypadnięcia z PP ||<%= @adr_spi.app_excursion %>  <br>
-  
-    Rozlewiska paliwa ||<%= @adr_spi.fuel %>  <br>
-  
-    Pożar, Dym, Opary ||<%= @adr_spi.fsf %>  <br>
-  
-    Kolizje GCOL ||<%= @adr_spi.gcol %>  <br>
-  
-    Zdarzenia RAMP ||<%= @adr_spi.ramp %>  <br>
-  
-    Przeszkody ||<%= @adr_spi.obstacle %>  <br>
-  
-    Zderzenia z ptakami ||<%= @adr_spi.birdstrike %>  <br>  
-  
-    Zderzenia ze zwierzętami ||<%= @adr_spi.wildlife %>  <br>
-  
-    Przerwany start przez zwierzęta ||<%= @adr_spi.wild_take_abort %>  <br>
-  
-    Go Around z powodu zwierząt ||<%= @adr_spi.go_around %>  <br>
-    
-    Zderzenia ze zwierzętami ||<%= @adr_spi.wildlife %>  <br>
-  
-    Lądowanie poniżej RVR ||<%= @adr_spi.land_rvr %>  <br>
-  
-    Start poniżej RVR ||<%= @adr_spi.take_off_rvr %>  <br>
-  
-    GCOL lub RAMP przy LVP ||<%= @adr_spi.gcol_ramp_lvp %> <br>
+    <%= @adr_spi.year %> <br> 
+<%= @adr_spi.month %>  <br> 
+<%= @adr_spi.stakeholder %> <br> 
+<%= @adr_spi.number_of_operations %>  <br> 
+<%= @adr_spi.rwy_incursion %>  <br>
+<%= @adr_spi.twy_incursion %>  <br>
+<%= @adr_spi.app_incursion %>  <br>
+<%= @adr_spi.rwy_excursion %>  <br>
+<%= @adr_spi.twy_excursion %>  <br>
+<%= @adr_spi.app_excursion %>  <br>
+<%= @adr_spi.fuel %>  <br>
+<%= @adr_spi.fsf %>  <br>
+<%= @adr_spi.gcol %>  <br>
+<%= @adr_spi.ramp %>  <br>
+<%= @adr_spi.obstacle %>  <br>
+<%= @adr_spi.birdstrike %>  <br>  
+<%= @adr_spi.wildlife %>  <br>
+<%= @adr_spi.wild_take_abort %>  <br>
+<%= @adr_spi.go_around %>  <br>
+<%= @adr_spi.wildlife %>  <br>
+<%= @adr_spi.land_rvr %>  <br>
+<%= @adr_spi.take_off_rvr %>  <br>
+<%= @adr_spi.gcol_ramp_lvp %> <br>
   </td>
 </tr>
 </table>
