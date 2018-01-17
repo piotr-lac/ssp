@@ -7,6 +7,7 @@ class AdrIndicatorsController < ApplicationController
 
   def show
     @adr_spi = AdrIndicator.find(params[:id])
+    @param = AdrIndicator.attribute_names
   end
 
   def new
