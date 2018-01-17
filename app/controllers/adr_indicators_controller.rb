@@ -20,19 +20,18 @@ class AdrIndicatorsController < ApplicationController
   end
 
   def edit
-    @adr_spi = AdrIndicator.find(params[:id])
+    @adr_indicator = AdrIndicator.find(params[:id])
   end
 
   def update
-    @adr_spi = AdrIndicator.find(params[:id])
-    @adr_spi.update(adr_spi_params)
+    @adr_indicator = AdrIndicator.find(params[:id])
+    @adr_indicator.update(adr_indicator_params)
     redirect_to adr_indicators_path
-    
   end
 
   def destroy
-    @adr_spi = AdrIndicator.find(params[:id])
-    @adr_spi.destroy
+    @adr_indicator = AdrIndicator.find(params[:id])
+    @adr_indicator.destroy
     redirect_to adr_indicators_path
   end
 
