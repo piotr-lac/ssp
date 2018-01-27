@@ -1,1 +1,27 @@
 <h1>show ahac_indicators</h1>
+
+<div style="font-size: 16px">
+  <table>
+    <tr>
+      <th> Wskaźnik </th> <th> Wartość </th>
+    </tr>
+    <tr>
+      <td>
+    Rok <br>
+    Miesiąc  <br>
+    Lotnisko <br>
+    Liczba operacji <br>
+    Pożar, Dym, Opary <br>
+    </td>
+  <td>
+    <%= @ahac_indicator.year %> <br> 
+  <%= @ahac_indicator.month %>  <br> 
+  <%= @ahac_indicator.stakeholder %> <br> 
+  <%= @ahac_indicator.number_of_operations %>  <br> 
+  <%= @ahac_indicator.fsf %>  <br>
+  </td>
+</tr>
+</table>
+</div>
+<%= link_to "Wróc do wskaźników", ahac_indicators_path %>
+<%= link_to "Edytuj", edit_ahac_indicator_path(@ahac_indicator.id) %>
