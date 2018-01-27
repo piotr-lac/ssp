@@ -1,1 +1,35 @@
 <h1>ATM Indicators index</h1>
+
+<p><%= link_to "Wróć na stronę główną |", root_path %>
+<%= link_to "| Dodaj wskaźniki ATM", new_atm_indicator_path %></p>
+<hr>
+
+<% @atm_spis.each do |spi| %>
+<table style="font-size: 12px; text-align: center">
+  <tr>
+    <th> Rok </th>
+    <th> Miesiąc </th>
+    <th> Podmiot </th>
+    <th> Safety alt </th> 
+    <th> Level bust </th> 
+    <th> SMI </th> 
+    <th> RVR minima </th> 
+        
+  </tr>  
+    <tr>
+      <td>  <%= spi.year %> </td>
+      <td>  <%= spi.month %> </td>
+      <td>  <%= spi.stakeholder %> </td>
+      <td>  <%= spi.safety_alt %> </td>
+      <td>  <%= spi.level_bust %> </td>
+      <td>  <%= spi.smi %> </td>
+      <td>  <%= spi.rvr_minima %> </td>
+      
+    </tr>  
+   
+</table>
+<%= link_to "Pokaż szczegóły", atm_indicator_path(spi.id) %>
+<%= link_to "Edytuj", edit_atm_indicator_path(spi.id) %>
+<%= link_to "Skasuj", atm_indicator_path(spi.id), method: :delete, data: { confirm: "Czy jestes pewien ?"} %>
+<hr>
+<% end %>

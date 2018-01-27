@@ -1,1 +1,38 @@
 <h1>ATO Indicators index</h1>
+
+<p><%= link_to "Wróć na stronę główną |", root_path %>
+<%= link_to "| Dodaj wskaźniki ATO", new_ato_indicator_path %></p>
+<hr>
+
+<% @ato_spis.each do |spi| %>
+<table style="font-size: 12px; text-align: center">
+  <tr>
+    <th> Rok </th>
+    <th> Miesiąc </th>
+    <th> Podmiot </th>
+    <th> Operacje </th> 
+    <th> SCF-NP </th> 
+    <th> SCF-PP </th> 
+    <th> tow-winch </th> 
+    <th> tow-aero </th> 
+        
+  </tr>  
+    <tr>
+      <td>  <%= spi.year %> </td>
+      <td>  <%= spi.month %> </td>
+      <td>  <%= spi.stakeholder %> </td>
+      <td>  <%= spi.number_of_operations %> </td>
+      <td>  <%= spi.scf_np %> </td>
+      <td>  <%= spi.scf_pp %> </td>
+      <td>  <%= spi.tow_winch %> </td>
+      <td>  <%= spi.tow_aero %> </td>
+      
+      
+    </tr>  
+   
+</table>
+<%= link_to "Pokaż szczegóły", ato_indicator_path(spi.id) %>
+<%= link_to "Edytuj", edit_ato_indicator_path(spi.id) %>
+<%= link_to "Skasuj", ato_indicator_path(spi.id), method: :delete, data: { confirm: "Czy jestes pewien ?"} %>
+<hr>
+<% end %>
