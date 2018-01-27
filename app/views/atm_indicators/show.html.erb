@@ -1,1 +1,31 @@
 <h1>show atm_indicators</h1>
+
+<div style="font-size: 16px">
+  <table>
+    <tr>
+      <th> Wskaźnik </th> <th> Wartość </th>
+    </tr>
+    <tr>
+      <td>
+    Rok <br>
+    Miesiąc  <br>
+    Podmiot <br>
+    Safety alt <br>
+    level_bust <br>
+    smi <br>
+    rvr_minima <br>
+    </td>
+  <td>
+    <%= @atm_indicator.year %> <br> 
+    <%= @atm_indicator.month %>  <br> 
+    <%= @atm_indicator.stakeholder %> <br> 
+    <%= @atm_indicator.safety_alt %>  <br> 
+    <%= @atm_indicator.level_bust %>  <br>
+    <%= @atm_indicator.smi %>  <br>
+    <%= @atm_indicator.rvr_minima %>  <br>
+  </td>
+</tr>
+</table>
+</div>
+<%= link_to "Wróc do wskaźników", atm_indicators_path %>
+<%= link_to "Edytuj", edit_atm_indicator_path(@atm_indicator.id) %>
