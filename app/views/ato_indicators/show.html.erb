@@ -1,1 +1,33 @@
 <h1>show ato_indicators</h1>
+
+<div style="font-size: 16px">
+  <table>
+    <tr>
+      <th> Wskaźnik </th> <th> Wartość </th>
+    </tr>
+    <tr>
+      <td>
+    Rok <br>
+    Miesiąc  <br>
+    Podmiot <br>
+    Operacje <br>
+    SCF_NP <br>
+    sCF_PP<br>
+    tow_winch <br>
+    tow_aero <br>
+    </td>
+  <td>
+    <%= @ato_indicator.year %> <br> 
+    <%= @ato_indicator.month %>  <br> 
+    <%= @ato_indicator.stakeholder %> <br> 
+    <%= @ato_indicator.number_of_operations %>  <br> 
+    <%= @ato_indicator.scf_np %>  <br>
+    <%= @ato_indicator.scf_pp %>  <br>
+    <%= @ato_indicator.tow_winch %>  <br>
+    <%= @ato_indicator.tow_aero %>  <br>
+  </td>
+</tr>
+</table>
+</div>
+<%= link_to "Wróc do wskaźników", ato_indicators_path %>
+<%= link_to "Edytuj", edit_ato_indicator_path(@ato_indicator.id) %>
