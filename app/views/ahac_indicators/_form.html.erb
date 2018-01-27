@@ -1,0 +1,52 @@
+<p> <%= link_to "Wróć do wskaźników", ahac_indicators_path %> </p>
+
+
+<%= form_for @ahac_indicator do |f| %>
+<table style="font-size: 14px">
+  <tr>
+    <td>
+      <% f.label :year %> Rok
+    </td>
+    <td>
+      <%= f.text_field :year %>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <% f.label :month %> Miesiąc
+    </td>
+    <td>
+      <%= f.text_field :month %> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <% f.label :stakeholder %> Podmiot
+    </td>
+    <td>
+      <%= f.text_field :stakeholder %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <% f.label :number_of_operations %> Liczba operacji
+    </td>
+    <td>
+      <%= f.text_field :number_of_operations %> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <% f.label :fsf %> Ogien, Dym, Opary
+    </td>
+    <td>
+      <%= f.text_field :fsf %> 
+    </td>
+  </tr>
+   <tr>
+    <td></td>
+    <td><%= f.submit "Zapisz" %>
+    </td>
+  </tr>
+  </table>
+<% end %>
