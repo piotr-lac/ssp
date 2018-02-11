@@ -12,13 +12,39 @@
     </td> 
   </tr>
   <tr>
+    <td> Miesiąc</td>
     <td>
-      <% f.label :month %> Miesiąc
+      <%= f.radio_button(:month, "styczeń") %>
+      <%= f.label(:month, "styczeń") %>
+      <%= f.radio_button(:month, "luty") %>
+      <%= f.label(:month, "luty") %>
+      <%= f.radio_button(:month, "marzec") %>
+      <%= f.label(:month, "marzec") %>
+      <%= f.radio_button(:month, "kwiecień") %>
+      <%= f.label(:month, "kwiecień") %>
+      <%= f.radio_button(:month, "maj") %>
+      <%= f.label(:month, "maj") %>
+      <%= f.radio_button(:month, "czerwiec") %>
+      <%= f.label(:month, "czerwiec") %>
+      
+      <br>
+      <%= f.radio_button(:month, "lipiec") %>
+      <%= f.label(:month, "lipiec") %>
+      <%= f.radio_button(:month, "sierpień") %>
+      <%= f.label(:month, "sierpień") %>
+      <%= f.radio_button(:month, "wrzesień") %>
+      <%= f.label(:month, "wrzesień") %>
+      <%= f.radio_button(:month, "październik") %>
+      <%= f.label(:month, "październik") %>
+      <%= f.radio_button(:month, "listopad") %>
+      <%= f.label(:month, "listopad") %>
+      <%= f.radio_button(:month, "grudzień") %>
+      <%= f.label(:month, "grudzień") %>
+
+ 
+      
     </td>
-    <td>
-      <%= f.text_field :month %> 
-    </td>
-  </tr>
+  <tr>
   <tr>
     <td>
       <% f.label :stakeholder %> Podmiot
